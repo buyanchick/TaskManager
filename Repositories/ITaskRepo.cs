@@ -1,7 +1,9 @@
-﻿namespace TaskManager.Repositories
+﻿using TaskManager.Models;
+
+namespace TaskManager.Repositories
 {
     public interface ITaskRepo
     {
-        Task<IEnumerable<Task>> GetTasks();
+        Task<IEnumerable<Todo>> GetTasks();
     }
 }

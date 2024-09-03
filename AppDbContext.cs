@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using TaskManager.Models;
 
 namespace TaskManager
 {
@@ -8,6 +9,6 @@ namespace TaskManager
         {
 
         }
-        public DbSet<Task> Todos => Set<Task>();
+        public DbSet<Todo> Todos => Set<Todo>();
     }
 }

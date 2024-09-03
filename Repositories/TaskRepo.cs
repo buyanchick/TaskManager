@@ -1,5 +1,6 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
+using TaskManager.Models;
 
 namespace TaskManager.Repositories
 {
@@ -10,7 +11,7 @@ namespace TaskManager.Repositories
         public TaskRepo(AppDbContext context) {
             _context = context;
         }
-        public async Task<IEnumerable<Task>> GetTasks()
+        public async Task<IEnumerable<Todo>> GetTasks()
         {
             return await _context.Todos.ToListAsync();
         }

@@ -15,7 +15,7 @@ namespace TaskManager.Controllers
         }
 
         [HttpGet("GetTasks")]
-        public async Task<ActionResult<IEnumerable<Task>>> Get()
+        public async Task<IActionResult> Get()
         {
             var tasks = await _repo.GetTasks();
             return Ok(tasks);
